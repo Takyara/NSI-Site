@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: 'Tw Cen MT', sans-serif;
+}
+
+.container {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('fond.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 0 8%;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 5px 0;
+}
+/*Ces balises servent pour le fond*/
+
+
+nav ul {
+	display: flex;
+	justify-content: flex-end;
+	flex: 1;
+	padding-right: 40px;
+	text-align: right;
+	list-style-type: none;
+}
+/*Cette balise sert pour le menu supérieur*/
+ul li {
+	margin-right: 10px;
+}
+/*Cette balise l'espacement sert pour le menu supérieur*/
+ul li a {
+	position: relative;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1vw;
+}
+
+ul li a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	transform: translateX(-50%) translateY(-5px);
+	height: 3px;
+	background: #ffa400;
+	transition: 0.3s;
+}
+
+ul li a:hover::after {
+	width: 38%;
+}
+
+.site-container {
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+	color: #fff;
+}
+
+.site-container p {
+	font-size: 2.1vw;
+	font-weight: bold;
+}
+
+.site-container h1 {
+	font-size: 5vw;
+	line-height: 120px;
+	color: transparent;
+	-webkit-text-stroke: 1px white;
+}
+/*Cette balise sert pour la transparence du h1*/
+
+@keyframes animate {
+	100% {
+		background-position: -500px 0;
+	}
+}
+
+.site-container h3 {
+	font-size: 5vw;
+	font-weight: 500;
+}
+
+.site-container .row {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 40px;
+}
+/*Cette balise sert pour l'alignement des boutons inférieurs*/
+.row a {
+	display: flex;
+	align-items: center;
+	padding: 5px 20px;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	margin-right: 1.7vw;
+	font-size: 1vw;
+	transition: 0.3s;
+}
+/*Cette balise sert pour la mise en forme des boutons inférieurs*/
+
+.row a:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.row span p{
+	font-size: 1vw;
+
+}
+
+/*Cette balise sert pour l'animation des boutons inférieurs*/
+
+.conteneur {
+	
+	margin-top: -130px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1vw; 
+	height: 100vh;
+}
+
+
+.tuile {
+	position: relative;
+	width: 12vw;
+	height: 12vw;
+	overflow: hidden;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+
+.tuile img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease-in-out;
+}
+
+.tuile:hover img {
+	transform: scale(1.1);
+	
+}
+
+.tuile .texte {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7); 
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.7vw;
+	font-weight: bold;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.tuile:hover .texte {
+	opacity: 1;
+}
+
+.info{
+    width: 90%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50vh; 
+      transform: translateY(-50%);
+}
+ 
+  .info a{
+    padding: 0;
+    text-decoration: none;
+    color: white;
+  }
+  .info h3{
+    position: relative;
+    left:9%;
+  }
+  .info ul{
+    list-style-type: none;
+    text-decoration: none;
+    position:relative;
+    left:10%;
+  }
+  .info #map{
+    position: absolute;
+    left:75%;
+  }
+  .info ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: -20px;
+    width: 0;
+    transform: translateX(-50%) translateY(-5px);
+    height: 3px;
+    background: #ffa400;
+    transition: 0.3s;
+}
+
+.info ul li a:hover::after {
+    width: 38%;
+}
